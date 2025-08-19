@@ -66,18 +66,17 @@ body {
 .titulo {
   position: absolute;
   z-index: 1; /* Fica por cima da overlay */
-  top: 200px;
+  /* top: 200px; */
   left: 3%;
-  width: 600px;
-  height: 300px;
+  width: 40%;
+  max-width: 600px; /* limite máximo */
+  /* height: 300px; */
 }
 
 .img-titulo {
   width: 100%; /* 80% da largura da div titulo */
-  max-width: 900px; /* limite máximo */
   height: auto;
   display: block;
-  margin: 0 auto; /* centraliza horizontalmente */
 }
 
 .rodape {
