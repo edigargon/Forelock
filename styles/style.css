@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Montserrat:wght@600&display=swap");
 
 :root {
-  --cor-primaria: #2c3639;
+  --cor-primaria: #ff0000;
   --cor-secundaria: #dcd7c9;
   --cor-terciaria: #a27b5c;
   --cor-hover: #3f4e4f;
 
-  --fonte-primaria: "Krona One", sans-serif;
+  --fonte-primaria: "Arial", "Helvetica" sans-serif;
   --fonte-secundaria: "Montserrat", sans-serif;
 }
 
@@ -19,23 +19,6 @@ body {
   box-sizing: border-box;
   background-color: var(--cor-primaria);
   color: var(--cor-secundaria);
-}
-
-.cabecalho {
-  padding: 2% 0% 0% 15%;
-}
-
-.cabecalho__menu {
-  display: flex;
-  gap: 80px;
-}
-
-.cabecalho__menu__links {
-  text-decoration: none;
-  font-family: var(--fonte-secundaria);
-  font-weight: 600;
-  font-size: 1.5rem; /*1 rem equivale a 16px*/
-  color: var(--cor-terciaria);
 }
 
 .fundo {
@@ -59,50 +42,90 @@ body {
   z-index: 1; /* Fica por cima da overlay */
   color: white;
   text-align: left;
-  /* padding-top: 10%;
-  padding-left: 20%; */
+
+  /* --- NOVAS PROPRIEDADES FLEXBOX --- */
+
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around; /* Distribui o espaço entre os itens */
+  padding: 5%; /* Adiciona um respiro nas bordas */
+  height: 100%; /* Garante que o container ocupe toda a altura */
+  box-sizing: border-box; /* Garante que o padding não estoure o tamanho */
+}
+
+.conteudo-esquerda {
+  display: flex;
+  flex-direction: column; /* Organiza o título e a sinopse em coluna */
+  gap: 20px; /* Espaço entre o título e a sinopse */
+  flex-basis: 45%; /* Define que a coluna da esquerda ocupará 45% do espaço */
 }
 
 .titulo {
-  position: relative;
-  z-index: 1; /* Fica por cima da overlay */
-  top: 200px;
-  left: 3%;
-  width: 40%;
-  max-width: 600px; /* limite máximo */
-  /* height: 300px; */
+  width: 100%;
+  max-width: 600px;
 }
 
 .img-titulo {
-  width: 100%; /* 80% da largura da div titulo */
+  width: 100%;
   height: auto;
   display: block;
 }
 
 .sinopsis {
-  position: relative;
+  position: relative; /* Necessário para posicionar a aspa */
   z-index: 1; /* Fica por cima da overlay */
-  top: 300px;
-  left: 8%;
-  width: 40%;
-  max-width: 600px; /* limite máximo */
+  font-family: Arial, sans-serif;
+  color: var(--cor-secundaria);
+  width: 100%;
+  line-height: 1.2;
+  font-size: 1.2rem;
+  max-width: 500px; /* limite máximo */
+  padding-left: 40px;
+}
+
+.sinopsis::before {
+  content: '"'; /* Adiciona a aspa antes do conteúdo do parágrafo */
+  position: absolute; /* Permite posicionar a aspa livremente */
+
+  /* Posição exata da aspa */
+  left: 0;
+  top: 35px; /* Ajuste este valor para subir ou descer a aspa */
+
+  /* Estilo da aspa */
+  font-family: Arial, sans-serif;
+  font-size: 5em; /* 5x o tamanho do texto (90px) */
+  color: var(--cor-primaria);
 }
 
 .sinopsis h2 {
   font-family: var(--fonte-primaria);
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 3rem;
   color: var(--cor-secundaria);
 }
 
-.rodape {
-  padding: 24px;
-  color: var(--cor-primaria);
-  background-color: var(--cor-terciaria);
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: var(--fonte-secundaria);
-  font-weight: 400;
+.video-container {
+  flex-basis: 50%; /*Define que o video ocupará 50% do espaço disponível*/
+}
+
+/* CONTAINER DE RESPONSIVIDADE DO VIDEO */
+.responsive-video-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* O wrapper deve ocupar 100% do .video-container */
+  max-width: 800px; /* Limite máximo */
+  /* A MÁGICA da proporção 16:9 (9 / 16 = 0.5625) */
+  padding-top: 56.25%;
+  margin: 0 auto; /* Centraliza o wrapper */
+}
+
+/* 3. O IFRAME DO VIMEO */
+.responsive-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
