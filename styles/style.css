@@ -183,6 +183,17 @@ body {
   height: 100%;
 }
 
+.rodape {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-family: var(--fonte-primaria);
+  color: var(--cor-secundaria);
+  font-size: 0.9rem;
+  z-index: 1; /* Fica por cima da overlay */
+}
+
 @media (max-width: 1200px) {
   .cabecalho {
     padding: 10%;
