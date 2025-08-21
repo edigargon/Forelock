@@ -56,7 +56,7 @@ body {
 .conteudo-esquerda {
   display: flex;
   flex-direction: column; /* Organiza o título e a sinopse em coluna */
-  gap: 20px; /* Espaço entre o título e a sinopse */
+  gap: 5vh; /* Espaço entre o título e a sinopse */
   flex-basis: 45%; /* Define que a coluna da esquerda ocupará 45% do espaço */
 }
 
@@ -78,7 +78,7 @@ body {
   color: var(--cor-secundaria);
   width: 100%;
   line-height: 1.2;
-  font-size: 1.2rem;
+  font-size: 2vh;
   max-width: 500px; /* limite máximo */
   padding-left: 40px;
 }
@@ -93,14 +93,14 @@ body {
 
   /* Estilo da aspa */
   font-family: Arial, sans-serif;
-  font-size: 5em; /* 5x o tamanho do texto */
+  font-size: 12vh; /* 5x o tamanho do texto */
   color: var(--cor-primaria);
 }
 
 .sinopsis h2 {
   font-family: var(--fonte-primaria);
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 6vh;
   color: var(--cor-secundaria);
 }
 
@@ -112,23 +112,23 @@ body {
   text-align: center; /* centraliza em cima do vídeo */
   font-family: var(--fonte-primaria);
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 10vh;
   color: var(--cor-secundaria);
-  margin-bottom: 20px; /* espaço entre título e vídeo */
+  margin-bottom: 1vh; /* espaço entre título e vídeo */
 }
 
 .video-titulo-h2 {
   text-align: center; /* centraliza em cima do vídeo */
   font-family: var(--fonte-primaria);
   font-weight: 900;
-  font-size: 7rem;
+  font-size: 12vh;
   color: var(--cor-secundaria);
 }
 
 .chamada {
   font-family: var(--fonte-primaria);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.9vh;
   color: var(--cor-secundaria);
   text-align: center; /* Centraliza a chamada */
   margin-top: 10px; /* Espaço entre o vídeo e a chamada */
@@ -142,7 +142,7 @@ body {
 
 .botao-container {
   text-align: center; /* Centraliza o botão */
-  margin-top: 20px; /* Espaço entre o vídeo e o botão */
+  margin-top: 1vh; /* Espaço entre o vídeo e o botão */
 }
 
 .btn-trailer {
@@ -152,8 +152,8 @@ body {
   font-family: var(--fonte-secundaria);
   font-size: 1.2rem;
   font-weight: 700;
-  padding: 12px 30px;
-  border-radius: 8px;
+  padding: 2.5vh 6vh;
+  border-radius: 3vh;
   text-decoration: none; /* Tira o sublinhado */
   transition: all 0.3s ease;
 }
@@ -185,12 +185,12 @@ body {
 
 .rodape {
   position: absolute;
-  bottom: 10px;
+  bottom: 1vh;
   width: 100%;
   text-align: center;
   font-family: var(--fonte-primaria);
   color: var(--cor-secundaria);
-  font-size: 0.9rem;
+  font-size: 1.5vh;
   z-index: 1; /* Fica por cima da overlay */
 }
 
