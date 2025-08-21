@@ -108,6 +108,15 @@ body {
   flex-basis: 50%; /*Define que o video ocupará 50% do espaço disponível*/
 }
 
+.video-titulo {
+  text-align: center; /* centraliza em cima do vídeo */
+  font-family: var(--fonte-primaria);
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 20px; /* espaço entre título e vídeo */
+}
+
 /* CONTAINER DE RESPONSIVIDADE DO VIDEO */
 .responsive-video-wrapper {
   position: relative;
