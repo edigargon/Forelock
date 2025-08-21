@@ -4,7 +4,7 @@
   --cor-primaria: #ff0000;
   --cor-secundaria: #dcd7c9;
   --cor-terciaria: #a27b5c;
-  --cor-hover: #3f4e4f;
+  --cor-hover: #0d3cbe;
 
   --fonte-primaria: "Arial", "Helvetica" sans-serif;
   --fonte-secundaria: "Montserrat", sans-serif;
@@ -115,6 +115,29 @@ body {
   font-size: 3rem;
   color: var(--cor-secundaria);
   margin-bottom: 20px; /* espaço entre título e vídeo */
+}
+
+.video-titulo-h2 {
+  text-align: center; /* centraliza em cima do vídeo */
+  font-family: var(--fonte-primaria);
+  font-weight: 900;
+  font-size: 7rem;
+  color: var(--cor-secundaria);
+}
+
+.chamada {
+  font-family: var(--fonte-primaria);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--cor-secundaria);
+  text-align: center; /* Centraliza a chamada */
+  margin-top: 10px; /* Espaço entre o vídeo e a chamada */
+}
+
+.destaque {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--cor-primaria);
 }
 
 .botao-container {
