@@ -79,8 +79,8 @@ body {
   width: 100%;
   line-height: 1.2;
   font-size: 2vh;
-  max-width: 500px; /* limite máximo */
-  padding-left: 40px;
+  max-width: 60vh; /* limite máximo */
+  padding-left: 5vh;
 }
 
 .sinopsis::before {
@@ -89,7 +89,7 @@ body {
 
   /* Posição exata da aspa */
   left: 0;
-  top: 35px; /* Ajuste este valor para subir ou descer a aspa */
+  top: 5vh; /* Ajuste este valor para subir ou descer a aspa */
 
   /* Estilo da aspa */
   font-family: Arial, sans-serif;
@@ -131,7 +131,7 @@ body {
   font-size: 1.9vh;
   color: var(--cor-secundaria);
   text-align: center; /* Centraliza a chamada */
-  margin-top: 10px; /* Espaço entre o vídeo e a chamada */
+  margin-top: 1vh; /* Espaço entre o vídeo e a chamada */
 }
 
 .destaque {
@@ -168,7 +168,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%; /* O wrapper deve ocupar 100% do .video-container */
-  max-width: 800px; /* Limite máximo */
+  /*max-width: 800px;*/ /* Limite máximo */
   /* A MÁGICA da proporção 16:9 (9 / 16 = 0.5625) */
   padding-top: 56.25%;
   margin: 0 auto; /* Centraliza o wrapper */
@@ -192,23 +192,4 @@ body {
   color: var(--cor-secundaria);
   font-size: 1.5vh;
   z-index: 1; /* Fica por cima da overlay */
-}
-
-@media (max-width: 1200px) {
-  .cabecalho {
-    padding: 10%;
-  }
-
-  .cabecalho__menu {
-    justify-content: center;
-  }
-
-  .apresentacao {
-    flex-direction: column-reverse;
-    padding: 5%;
-  }
-
-  .apresentacao__conteudo {
-    width: auto;
-  }
 }
